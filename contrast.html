@@ -45,13 +45,39 @@
 
 <!-------------------main------------------->
 
-<main id="main-content" role="main">
-<section class="index"><h1>Ιστοσελίδα-βοηθός για Προσβάσιμα PDF</h1>
-<p><b>Καλώς Ήρθατε!</b> Η παρούσα Ιστοσελίδα έχει σκοπό να σας μάθει βασικές ενέργειες με τις οποίες μπορείτε να κάνετε τα PDF σας πιο προσβάσιμα. 
-Για την εξυπηρέτηση και συμπερίληψη του ευρύτερου κοινού, θα χρησιμοποιηθεί η εφαρμογή Google Docs ως πρόγραμμα συγγραφής PDF, η οποία είναι διαθέσιμη δωρεάν για όλους.</p>
-<p class="indexlink"><a href="https://docs.google.com/">Σύνδεσμος προς εφαρμογή Google Docs</a></p>
+<main id="main-content" role="main" style="padding:40px 0px;">
+  <section class="quiz"><h1>Βαθμός Αντίθεσης Χρωμάτων</h1>
+<p>Για να είναι ευανάγνωστο ένα ψηφιακό περιβάλλον, πρέπει να υπάρχει μεγάλος βαθμός αντίθεσης μεταξύ των χρωμάτων του φόντου και του κειμένου.</p>
+  <p>Οι Οδηγίες WCAG δήνουν <b>δύο επίπεδα συμμόρφωσης Βαθμού Αντίθεσης Χρωμάτων: Α και ΑΑ.</b></p> 
+  <p>Ο βαθμός συμμόρφωσης Α ισχύει κυρίως για τίτλους ή άλλα κείμενα με μεγάλες διαστάσεις, ενώ ο βαθμός συμμόρφωσης ΑΑ ισχύει για όλα τα υπόλοιπα κείμενα.</p> 
+  
+    <p><b>Πρόταση:</b> Δοκιμάστε όλους τους πυθανούς συνδιασμούς χρωμάτων για να δείτε την εφαρμογή όλων των επιπέδων συμμόρφωσης WCAG.</p>
 </section>
+<section class="quiz">
+    <h2>Τεστ Βαθμού Αντίθεσης Χρωμάτων</h2>
+    <p style="text-align:center;">Επιλέξτε το συνδιασμό χρωμάτων που πιστεύετε πως τηρεί το επίπεδο συμμόρφωσης ΑΑ του WCAG.</p>
+    
+    <form class="cntrQuiz" name="cntrQuiz">
+    
+    <fieldset>
+    <legend>
+        Χρώμα Φόντου
+    </legend>
+      <input type="radio" name="q1" value="a" id="q1a"><label class="clrcnt1" for="q1a">ΚΟΚΚΙΝΟ</label>
+      <input type="radio" name="q1" value="b" id="q1b"><label class="clrcnt2" for="q1b">ΓΑΛΑΖΙΟ</label>
+    </fieldset>
 
+    <fieldset>
+    <legend>
+      Χρώμα Κειμένου
+    </legend>
+      <input type="radio" name="q2" value="a" id="q2a"><label class="clrcnt3" for="q2a">ΠΡΑΣΙΝΟ</label>
+      <input type="radio" name="q2" value="b" id="q2b"><label class="clrcnt4" for="q2b">ΡΟΖ</label>
+    </fieldset>
+
+    <input type="submit" value="Έλεγχος Απαντήσεων">
+    </form>
+  </section>
 </main>
 </body>
 
@@ -70,5 +96,7 @@
 
 </div>
 </footer>
+
+<script src="cntrquiz.js"></script>
 <script src="scripts.js" ></script>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="el">
+<meta charset="utf-8" />
+<head>
+<title>ΨΗΦΙΑΚΗ ΠΡΟΣΒΑΣΙΜΟΤΗΤΑ ΣΕ PDF</title>
+<link rel="stylesheet" href="main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-------------------skip to content---------->
+
+<a href="#main-content" class="skipmain">Skip to main content</a>
+
+<!-------------------header------------------->
+
+<header role="banner" class="banner">
+<div class="bannerimg"><img alt="" src="Accessibility.svg" /></div>
+<span class="bannertitle">ΨΗΦΙΑΚΗ ΠΡΟΣΒΑΣΙΜΟΤΗΤΑ</span>
+<div class="subtitle">Μια ιστοσελίδα με βασικές Οδηγίες για τη δημιουργία προσβάσιμων PDF.</div>
+</header>
+
+<!-------------------navbar------------------->
+
+<nav role="navigation">
+<ul aria-label="Κύριο Μενού">
+   <li>
+    <a href="index.html">ΑΡΧΙΚΗ</a>
+   </li>
+   <li>
+    <a href="guide.html">ΟΔΗΓΟΣ PDF</a>
+   </li>
+   <li class="dropdown" id="dropdown">
+   <button id="dropbutton" aria-expanded="false" aria-controls="droplist" class="dropbutton" onclick="dropDownMenu(),changeDropIcon()">ΤΕΣΤ +</button>
+    <ul class="droplist" id="droplist">
+    <li><a href="alttext.html">Εναλλακτικό Κείμενο</a></li>
+    <li><a href="contrast.html">Αντίθεση Χρωμάτων</a></li>
+    </ul>
+   </li>
+   <li>
+    <a href="about.html">ΠΛΗΡΟΦΟΡΙΕΣ</a>
+   </li>
+ </ul>
+</nav>
+
+<!-------------------main------------------->
+
+<main id="main-content" role="main" style="padding:40px 0px;">
+
+  <section class="quiz"><h1>Εναλλακτικό Κείμενο (Alternative Text)</h1>
+<p>Το Εναλλακτικό Κείμενο (Alternative Text) είναι κείμενο που συμπεριλαμβάνεται στο κώδικα της ψηφιακής εφαρμογής μαζί με την εικόνα στην οποία αντιστοιχεί, και περιγράφει το περιεχόμενο της εικόνας.</p>
+  <p>Το Εναλλακτικό Κείμενο πρέπει να περιγράφει με <b>λίγα</b> λόγια το περιεχόμενο της εικόνας, έτσι ώστε να μεταφέρει στο χρήστη που πλοηγέιτε στην ιστοσελίδα με Αναγνώστη Οθόνης την απαραίτητη πληροφορία της εικόνας.</p> 
+  <p>Όσο πιο λεπτομερής είναι η περιγραφή της εικόνας, τόσο περισσότερο χρόνο χάνει ο χρήστης περιμένοντας να τελειώση η προφορική περιγραφή.</p>
+    <p><b>Πρόταση:</b> Αν πλοηγηθείται στην ιστοσελίδα με τη βοήθεια ενός Αναγνώστη Οθόνης (Screen Reader), μπορείται να δείτε της σωστές απαντήσεις διαβάζοντας το εναλλακτικό κείμενο των εικόνων στην αρχή της κάθε Ενώτητας του τεστ.</p>
+</section>
+  <section class="quiz">
+    <h2>Τεστ Εναλλακτικού Κειμένου για εικόνες</h2>
+    <p style="text-align:center;">Επιλέξτε το πιο σωστό Εναλλακτικό Κείμενο για τη κάθε Εικόνα.</p>
+    <form onsubmit="yourJsFunction();return false" aria-label="Τεστ Εναλλακτικού Κειμένου για εικόνες" class="altQuiz" name="altQuiz" >
+    <button type="button" class="imgbuttonresize"  id="altimg1button" onclick="altImg1()">Mεγέθυνση/σμίκρυνση Εικόνας 1</button>
+    <fieldset>
+    <legend>
+      <img src="hill.png" class="altimg" id="altimg1" role="img" alt="Δέντρο σε λόφο." />
+    </legend>
+      <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Πρωί, δέντρο, λόφος, ουρανός.</label>
+      <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Δέντρο σε λόφο.</label>
+      <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Μια ζωγραφιά με ένα δέντρο σε έναν λόφο το ξημέρωμα, με σύννεφα στον ουρανό.</label>
+    </fieldset>
+
+    <button type="button" class="imgbuttonresize"  id="altimg2button" onclick="altImg2()">Mεγέθυνση/σμίκρυνση Εικόνας 2</button>
+    <fieldset>
+    <legend>
+      <img src="sunset.png" class="altimg" id="altimg2" role="img" alt="Ηλιοβασίλεμα στη θάλασσα." />
+    </legend>
+      <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">Θάλασσα με κύμματα, ηλιοβασίλεμα και πολλά σκοτεινά σύννεφα.</label>
+      <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">Ζωγραφιά όπου έχει φουρτούνα στη θάλασσα και από πίσω δύει ο ήλιος.</label>
+      <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">Ηλιοβασίλεμα στη θάλασσα.</label>
+    </fieldset>
+
+    <button type="button" class="imgbuttonresize"  id="altimg3button" onclick="altImg3()">Mεγέθυνση/σμίκρυνση Εικόνας 3</button>
+    <fieldset>
+    <legend>
+      <img src="shapes.png" class="altimg" id="altimg3" role="img" alt="Σχήματα διαφώρων ειδών και χρωμάτων." />
+    </legend>
+      <input type="radio" name="q3" value="a" id="q3a"> <label for="q3a">Σχήματα.</label>
+      <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">Πορτοκαλί, μόβ και τιρκουάζ κύκλοι. Πράσινο, φούξια, μπλε και σιαν ορθογώνια. Κόκκινα περιγράμματα τριγώνων.</label>
+      <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">Σχήματα διαφώρων ειδών και χρωμάτων.</label>
+    </fieldset>
+
+      <input type="submit" value="Έλεγχος Απαντήσεων">
+    </form>
+    <div id="altresults"></div>
+  </section>
+</main>
+</body>
+
+<!-------------------footer------------------->
+
+<footer aria-label="Πληροφορίες Δημιουργίας Ιστοσελίδας" role="contentinfo">
+<div class="footerinfo">
+<a aria-label="Σύνδεσμος προς Ιστοσελίδα Πανεπιστημίου" href="https://gd.uniwa.gr/">
+    <img alt="" src="uniwalogo.png" class="uniimg" />
+</a>
+
+<p>Η παρούσα ιστοσελίδα πρόκειται για ενδεικτική εφαρμογή Ψηφιακής Προσβασιμότητας για χρήση ως βοηθητικό εργαλείο σε πλαίσιο Συμπεριλιπτικής Εκπαίδευσης. Μέρος Πτυχιακής Εργασίας.</p>
+<p style="margin-top:15px!important;">Ιωάννα Αβραμοπούλου | ΑΜ517160160230</p>
+<p>Τμήμα Γραφιστική και Οπτικής Επικοινωνίας: Κατεύθηνση Τεχνολογία Γραφικών Τεχνών</p>
+<p>Πανεπιστήμιο Δυτικής Αττικής, 2025</p>
+
+</div>
+</footer>
+
+<script src="scripts.js" ></script>
+<script src="alttextquizz.js" ></script>
+</html>

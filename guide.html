@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="el">
+<meta charset="utf-8" />
+<head>
+<title>ΨΗΦΙΑΚΗ ΠΡΟΣΒΑΣΙΜΟΤΗΤΑ ΣΕ PDF</title>
+<link rel="stylesheet" href="main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-------------------skip to content---------->
+
+<a href="#main-content" class="skipmain">Skip to main content</a>
+
+<!-------------------header------------------->
+
+<header role="banner" class="banner">
+<div class="bannerimg"><img alt="" src="Accessibility.svg" /></div>
+<span class="bannertitle">ΨΗΦΙΑΚΗ ΠΡΟΣΒΑΣΙΜΟΤΗΤΑ</span>
+<div class="subtitle">Μια ιστοσελίδα με βασικές Οδηγίες για τη δημιουργία προσβάσιμων PDF.</div>
+</header>
+
+<!-------------------navbar------------------->
+
+<nav role="navigation">
+<ul aria-label="Κύριο Μενού">
+   <li>
+    <a href="index.html">ΑΡΧΙΚΗ</a>
+   </li>
+   <li>
+    <a href="guide.html">ΟΔΗΓΟΣ PDF</a>
+   </li>
+   <li class="dropdown" id="dropdown">
+   <button id="dropbutton" aria-expanded="false" aria-controls="droplist" class="dropbutton" onclick="dropDownMenu(),changeDropIcon()">ΤΕΣΤ +</button>
+    <ul class="droplist" id="droplist">
+    <li><a href="alttext.html">Εναλλακτικό Κείμενο</a></li>
+    <li><a href="contrast.html">Αντίθεση Χρωμάτων</a></li>
+    </ul>
+   </li>
+   <li>
+    <a href="about.html">ΠΛΗΡΟΦΟΡΙΕΣ</a>
+   </li>
+ </ul>
+</nav>
+
+<!-------------------main------------------->
+
+<main id="main-content" role="main">
+<section class="guide"><h1>Οδηγίες Δημιουργίας Προσβάσιμου PDF <br>στο Google Docs</h1></section>
+<section role="navigation" aria-label="Μενού Οδηγού" class="guidesnav">
+<a href="#lang">Γλώσσα Αρχείου</a> <a href="#heads">Τίτλοι (Headings)</a> 
+<a href="#altt">Alternative Text (Εναλλακτικό Κείμενο)</a>
+<a href="#linksg">Σύνδεσμοι (Links)</a> <a href="#clrcontr">Color Contrast (Αντίθεση Χρωμάτων)</a>
+</section>
+
+<section id="lang" class="guide">
+  <h1>Γλώσσα Αρχείου</h1>
+
+<p class="mainpsubtitle">Αλλαγή γλώσσας αρχείου για σωστή χρήση Screen Reader.</p>
+
+<p>Η χρήση της σωστής γλώσσας ανάλογα με το κείμενο του αρχείου είναι 
+απαραίτητη για τη σωστή χρήση Screen Reader (Αναγνώστη Οθόνης).</p>
+
+<button class="imgbuttonresize" id="imgbuttonlang" onclick="langImg()">Mεγέθυνση/σμίκρυνση Εικόνας Οδηγειών (Γλώσσα Αρχείου)</button>
+
+<img id="guideimglang" src="lang.png" alt="Βήματα Αλλαγής Γλώσσας Αρχείου" class="guideimgs"/>
+
+<h2 margin="0">Οδηγείες Αλλαγής Γλώσσας</h2>
+<ol><li>Για <b>Windows</b> πατήστε <b1>Alt + Shift + F</b1> για να ανοίξει το μενού <b>File.</b></li>
+<li>Πλοηγηθείτε στην επιλογή <b>Language</b>, και επιλέξτε τη σωστή γλώσσα.</li>
+<li>Για <b>Mac</b> πατήστε <b1>Control + Option + F</b1> για να ανοίξει το μενού <b>File.</b></li>
+<li>Πλοηγηθείτε στην επιλογή <b>Language</b>, και επιλέξτε τη σωστή γλώσσα.</li></ol>
+</section>
+
+<section id="heads" class="guide">
+  <h1>Τίτλοι (Headings)</h1>
+
+<p class="mainpsubtitle">Σωστή μορφοποίηση Τίτλων για καλύτερη πλοήγηση με το Πληκτρολογιο.</p>
+
+<p>Χρησιμοποιήστε Heading Tags και προσθέστε αρίθμηση στους τίτλους αν χρειάζεται για πιο σωστή πλοήγηση.</p>
+<p>Μη χρησιμοποιείτε Headings για στυλιστικούς λόγους, αλλά μόνο για λόγους δομής.</p>
+
+<button class="imgbuttonresize"  id="imgbuttonheads" onclick="headsImg()">Mεγέθυνση/σμίκρυνση Εικόνας Οδηγειών (Γλώσσα Αρχείου)</button>
+
+<img id="guideimgheads" src="heads.png" alt="Βήματα Μορφοποίησης Τίτλων" class="guideimgs"/>
+
+<h2 margin="0">Οδηγείες Μορφοποίησης Τίτλων</h2>
+<ol><li>Επιλέξτε το Τίτλο.</b></li>
+<li>Για <b>Windows</b> πατήστε <b1>Ctrl + Alt + 1 εως 6</b1> ανάλογα το επίπεδο Τίτλου.</li>
+<li>Για <b>Mac</b> πατήστε <b1>Cmd + Option + 1 εως 6</b1> ανάλογα το επίπεδο Τίτλου.</li></ol>
+</section>
+
+<section id="altt" class="guide">
+  <h1>Alternative Text (Εναλλακτικό Κείμενο)</h1>
+
+<p class="mainpsubtitle">Χρήση Εναλλακτικού Κειμένου για Εικόνες μέσα στο αρχείο.</p>
+
+<p>Η ανάγνωση εικόνων από Screen Readers (Αναγνώστες Οθόνης) δεν είναι δυνατή χωρίς τη χρήση Alternative Text (Εναλλακτικού Κειμένου).</p> 
+<p>Το Εναλλακτικό Κείμενο πρέπει να περιγράφει το περιεχόμενο της εικόνας με όσο λιγότερες λέξεις γίνεται. </p>
+<p>Καλό είναι οι διακοσμητικές εικόνες που δεν έχουν κάποια χρησιμότητα στο αρχείο να μην έχουν Alternative Text (Εναλλακτικό Κείμενο), έτσι ώστε οι χρήστες των Screen Readers (Αναγνώστες Οθόνης) να μην χάνουν χρόνο σε άχρηστες πληροφορίες.</p>
+
+<button class="imgbuttonresize"  id="imgbuttonaltt" onclick="alttImg()">Mεγέθυνση/σμίκρυνση Εικόνας Οδηγειών (Γλώσσα Αρχείου)</button>
+
+<img id="guideimgaltt" src="alttxt.png" alt="Βήματα Πρόσθεσης Εναλλακτικού Κειμένου" class="guideimgs"/>
+
+<h2 margin="0">Οδηγείες Πρόσθεσης Εναλλακτικού Κειμένου</h2>
+<ol><li>Επιλέξτε την Εικόνα.</b></li>
+<li>Για <b>Windows</b> πατήστε <b1>Ctrl + Alt + Υ</b1>, και πληκτρολογήστε το Εναλλακτικό Κείμενο.</li>
+<li>Για <b>Mac</b> πατήστε <b1>Cmd + Option + Υ</b1>, και πληκτρολογήστε το Εναλλακτικό Κείμενο.</li></ol>
+</section>
+
+<section id="linksg" class="guide">
+  <h1>Σύνδεσμοι (Links)</h1>
+
+<p class="mainpsubtitle">Σωστός Χαρακτηρισμός Συνδέσμων για σωστή χρήση Screen Reader.</p>
+
+<p>Οι Σύνδεσμοι πρέπει πάντα να χαρακτηρίζουν έμπιστα το προορισμό τους, έτσι ώστε οι χρήστες με Screen Readers (Αναγνώστες Οθόνης) να ξέρουν σε τι οδηγεί ο Σύνδεσμος.</p>
+
+<button class="imgbuttonresize"  id="imgbuttonlinksg" onclick="linksgImg()">Mεγέθυνση/σμίκρυνση Εικόνας Οδηγειών (Γλώσσα Αρχείου)</button>
+
+<img id="guideimglinksg" src="linksg.png" alt="Βήματα Χαρακτηρισμού Συνδέσμων" class="guideimgs"/>
+
+<h2 margin="0">Οδηγείες Χαρακτηρισμού Συνδέσμων</h2>
+<ol><li>Επιλέξτε τον Σύνδεσμο.</b></li>
+<li>Για <b>Windows</b> πατήστε <b1>Ctrl + k</b1>, και πληκτρολογήστε το Χαρακτηρισμό του Συνδέσμου.</li>
+<li>Για <b>Mac</b> πατήστε <b1>Cmd + k</b1>, και πληκτρολογήστε το Χαρακτηρισμό του Συνδέσμου.</li></ol>
+</section>
+
+<section id="clrcontr" class="guide">
+  <h1>Color Contrast (Αντίθεση Χρωμάτων)</h1>
+
+<p class="mainpsubtitle">Χρήση σωστών αναλογιών αντίθεσης χρωμάτων για ευανάγνωστα αρχεία.</p>
+
+<p>Αν χρησιμοποιήσετε διαφορετικά χρώματα σε οποιοδήποτε σημείο του αρχείου, σιγουρευτείτε πως η αναλογία αντίθεσης των χρωμάτων φόντου και κειμένου είναι αρκετά μεγάλη για να είναι ευανάγνωστο το κείμενο.</p> 
+<p>Για τον έλεγχο χρωμάτων, ακολουθήστε το παρακάτω σύνδεσμο:</p>
+
+<p class="indexlink"><a href="https://webaim.org/resources/contrastchecker/">Contrast Checker (Έλεγχος Αντίθεσης Χρωμάτων) της WEBAIM</a></p>
+</section>
+
+</main>
+</body>
+
+<!-------------------footer------------------->
+
+<footer aria-label="Πληροφορίες Δημιουργίας Ιστοσελίδας" role="contentinfo">
+<div class="footerinfo">
+<a aria-label="Σύνδεσμος προς Ιστοσελίδα Πανεπιστημίου" href="https://gd.uniwa.gr/">
+    <img alt="" src="uniwalogo.png" class="uniimg" />
+</a>
+
+<p>Η παρούσα ιστοσελίδα πρόκειται για ενδεικτική εφαρμογή Ψηφιακής Προσβασιμότητας για χρήση ως βοηθητικό εργαλείο σε πλαίσιο Συμπεριλιπτικής Εκπαίδευσης. Μέρος Πτυχιακής Εργασίας.</p>
+<p style="margin-top:15px!important;">Ιωάννα Αβραμοπούλου | ΑΜ517160160230</p>
+<p>Τμήμα Γραφιστική και Οπτικής Επικοινωνίας: Κατεύθηνση Τεχνολογία Γραφικών Τεχνών</p>
+<p>Πανεπιστήμιο Δυτικής Αττικής, 2025</p>
+
+</div>
+</footer>
+
+
+<script src="scripts.js" ></script>
+</html>
