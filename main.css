@@ -205,12 +205,17 @@ p.indexlink a:focus,p.indexlink a:hover,p.aboutlink a:focus,p.aboutlink a:hover 
     color:#FFFFF3!important;
 }
 
+nav.guidesnav a:focus,nav.guidesnav a:hover {
+    background: #235624;
+    color:#FFFFF3!important;
+}
+
 .guidesnav {
     width:70%;
     text-align:center;
     margin:auto;
     margin-top:-30px;
-color:#235624!important;
+    color:#235624!important;
 }
 .guidesnav nav {
 	background:none!important;
