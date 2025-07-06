@@ -188,7 +188,7 @@ p.indexlink a:focus,p.indexlink a:hover,p.aboutlink a:focus,p.aboutlink a:hover 
 
 /*********guide*********/
 
-.guidesnav a {
+.guidesnav a,.guidesnav nav a {
     background:#DFF0D8;
     padding:10px;
     display:inline-block;
