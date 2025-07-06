@@ -202,7 +202,7 @@ p.indexlink a:focus,p.indexlink a:hover,p.aboutlink a:focus,p.aboutlink a:hover 
 
 .guidesnav a:focus,.guidesnav a:hover {
     background: #235624;
-    color:#FFFFF3;
+    color:#FFFFF3!important;
 }
 
 .guidesnav {
