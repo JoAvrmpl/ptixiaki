@@ -209,6 +209,12 @@ p.indexlink a:focus,p.indexlink a:hover,p.aboutlink a:focus,p.aboutlink a:hover 
     margin:auto;
     margin-top:-30px;
 }
+.guidesnav nav {
+	background:none!important;
+	display:inline-block!important;
+	width:100%!important;
+	margin:0px!important;
+}
 
 .guideimgs {
     width:35%;
