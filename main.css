@@ -196,6 +196,8 @@ p.indexlink a:focus,p.indexlink a:hover,p.aboutlink a:focus,p.aboutlink a:hover 
     font-weight:bold;
     text-decoration: none;
     text-align:center;
+    color:#235624!important;
+    font-size:18px!important;
 }
 
 .guidesnav a:focus,.guidesnav a:hover {
