@@ -210,12 +210,14 @@ p.indexlink a:focus,p.indexlink a:hover,p.aboutlink a:focus,p.aboutlink a:hover 
     text-align:center;
     margin:auto;
     margin-top:-30px;
+color:#235624!important;
 }
 .guidesnav nav {
 	background:none!important;
 	display:inline-block!important;
 	width:100%!important;
 	margin:0px!important;
+	color:#235624!important;
 }
 
 .guideimgs {
